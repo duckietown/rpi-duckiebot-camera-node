@@ -9,9 +9,10 @@ RUN usermod -a -G video root
 
 # install ENTRYPOINT script
 ADD assets/entrypoint_camera.sh /root/entrypoint_camera.sh
+RUN chmod +x /root/entrypoint_camera.sh
 
 # disable ARM
-RUN [ "cross-build-start" ]
+RUN [ "cross-build-end" ]
 
 # configure ENTRYPOINT
 ENTRYPOINT ["/ros_entrypoint.sh", "/root/entrypoint_camera.sh"]
