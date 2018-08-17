@@ -8,7 +8,7 @@ RUN [ "cross-build-start" ]
 RUN usermod -a -G video root
 
 # install ENTRYPOINT script
-ADD assets/entrypoint_camera.sh /root/entrypoint_camera.sh
+ADD assets/* /root/
 RUN chmod +x /root/entrypoint_camera.sh
 
 # disable ARM
