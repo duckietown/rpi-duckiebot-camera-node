@@ -5,4 +5,4 @@ source /home/software/docker/env.sh
 source /home/software/catkin_ws/devel/setup.bash
 
 # launch camera node
-roslaunch duckietown camera.launch veh:=${HOSTNAME}
+roslaunch --wait duckietown camera.launch veh:=${HOSTNAME}
